@@ -11,6 +11,6 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: sync-waves
+    path: staging/sync-waves
     repoURL: https://github.com/hqzhang/argocd-example-apps
     targetRevision: HEAD
