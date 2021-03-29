@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: custom
+  namespace: argocd
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: custom
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: staging/dc1/custom
+    repoURL: https://github.com/hqzhang/argocd-example-apps
+    targetRevision: HEAD
